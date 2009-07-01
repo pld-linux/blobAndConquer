@@ -1,0 +1,26 @@
+--- blobAndConquer-1.06/makefile~	2009-06-28 16:01:28.000000000 +0200
++++ blobAndConquer-1.06/makefile	2009-07-01 14:18:36.000000000 +0200
+@@ -11,8 +11,8 @@
+ DEV = 0
+ 
+ PREFIX = $(DESTDIR)/usr
+-BINDIR = $(PREFIX)/games/
+-DATADIR = $(PREFIX)/share/games/blobAndConquer/
++BINDIR = $(PREFIX)/bin/
++DATADIR = $(PREFIX)/share/blobAndConquer/
+ DOCDIR = $(PREFIX)/share/doc/$(PROG)/
+ ICONDIR = $(PREFIX)/share/icons/
+ MENUDIR = $(PREFIX)/share/applications/
+@@ -96,10 +96,10 @@
+ 
+ # linking the program.
+ $(PROG): $(GAMEOBJS)
+-	$(CXX) $(LIBS) $(GAMEOBJS) -o $(PROG)
++	$(CXX) $(LDFLAGS) $(GAMEOBJS) -o $(PROG) $(LIBS)
+ 	
+ pak: $(PAKOBJS)
+-	$(CXX) $(LIBS) $(PAKOBJS) -o pak
++	$(CXX) $(LDFLAGS) $(PAKOBJS) -o pak $(LIBS)
+ 	
+ %.mo: %.po
+ 	msgfmt -c -o $@ $<
