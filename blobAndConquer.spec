@@ -10,6 +10,7 @@ Group:		X11/Applications/Games
 Source0:	%{name}-%{version}-1.tar.gz
 # Source0-md5:	17e3dd5b42142dddbc0af85fb7470d8a
 Patch0:		%{name}-makefile.patch
+Patch1:		%{name}-desktop.patch
 URL:		http://www.parallelrealities.co.uk/projects/blobAndConquer.php
 BuildRequires:	OpenGL-GLU-devel
 BuildRequires:	OpenGL-devel
@@ -30,6 +31,7 @@ drugi epizod sagi Blob Wars.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 %{__make} \
