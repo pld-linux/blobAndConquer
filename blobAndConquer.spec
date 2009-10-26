@@ -16,6 +16,7 @@ BuildRequires:	OpenGL-devel
 BuildRequires:	SDL_image-devel
 BuildRequires:	SDL_mixer-devel
 BuildRequires:	SDL_ttf-devel
+BuildRequires:	dos2unix
 BuildRequires:	rpmbuild(macros) >= 1.268
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -30,6 +31,7 @@ drugi epizod sagi Blob Wars.
 
 %prep
 %setup -q
+dos2unix makefile
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
