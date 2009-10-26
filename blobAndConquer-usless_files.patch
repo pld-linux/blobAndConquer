@@ -1,0 +1,42 @@
+--- blobAndConquer-1.09/makefile~	2009-10-26 12:41:03.000000000 +0000
++++ blobAndConquer-1.09/makefile	2009-10-26 12:48:03.000000000 +0000
+@@ -1,6 +1,5 @@
+ PROG = blobAndConquer
+ PAKNAME = blobAndConquer.pak
+-DOCS = doc/*
+ ICONS = icons/
+ 
+ PAKDIRS = data gfx music sound textures
+@@ -13,7 +12,6 @@
+ PREFIX = $(DESTDIR)/usr
+ BINDIR = $(PREFIX)/bin/
+ DATADIR = $(PREFIX)/share/blobAndConquer/
+-DOCDIR = $(PREFIX)/share/doc/$(PROG)/
+ ICONDIR = $(PREFIX)/share/icons/hicolor/
+ MENUDIR = $(PREFIX)/share/applications/
+ LOCALEDIR = $(PREFIX)/share/locale/
+@@ -23,7 +21,7 @@
+ CXXFLAGS += -Wmissing-format-attribute -Wmissing-noreturn
+ CXXFLAGS += -Wdisabled-optimization
+ CXXFLAGS += `sdl-config --cflags` -DVERSION=$(VERSION) -DRELEASE=$(RELEASE) -DUSEPAK=$(USEPAK) -DDEV=$(DEV)
+-CXXFLAGS += -DPAKNAME=\"$(PAKNAME)\" -DPAKLOCATION=\"$(DATADIR)\" -DGAMEPLAYMANUAL=\"$(DOCDIR)/index.html\" -Wall -pedantic
++CXXFLAGS += -DPAKNAME=\"$(PAKNAME)\" -DPAKLOCATION=\"$(DATADIR)\" -Wall -pedantic
+ CXXFLAGS += -DLOCALEDIR=\"$(LOCALEDIR)\" -g
+ LIBPATH = -L/usr/X11/lib -L/usr/X11R6/lib
+ LIBS = -lGL -lGLU `sdl-config --libs` -lSDL_mixer -lSDL_image -lSDL_ttf -lz
+@@ -112,7 +110,6 @@
+ 
+ 	mkdir -p $(BINDIR)
+ 	mkdir -p $(DATADIR)
+-	mkdir -p $(DOCDIR)
+ 	mkdir -p $(ICONDIR)/16x16/apps
+ 	mkdir -p $(ICONDIR)/32x32/apps
+ 	mkdir -p $(ICONDIR)/64x64/apps
+@@ -121,7 +118,6 @@
+ 	install -m 755 $(PROG) $(BINDIR)/$(PROG)
+ 	install -m 644 $(PAKNAME) $(DATADIR)/$(PAKNAME)
+ 	
+-	cp -r $(DOCS) $(DOCDIR)
+ 	cp $(ICONS)$(PROG).png $(ICONDIR)32x32/apps/
+ 	cp $(ICONS)$(PROG).desktop $(MENUDIR)
+ 
