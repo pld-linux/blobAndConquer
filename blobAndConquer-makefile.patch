@@ -1,6 +1,6 @@
---- blobAndConquer-1.08/makefile~	2009-08-05 18:04:53.000000000 +0200
-+++ blobAndConquer-1.08/makefile	2009-10-05 13:19:44.000000000 +0200
-@@ -11,8 +11,8 @@
+--- blobAndConquer-1.09/makefile~	2009-10-26 12:42:17.000000000 +0000
++++ blobAndConquer-1.09/makefile	2009-10-26 12:41:03.000000000 +0000
+@@ -11,10 +11,10 @@
  DEV = 0
  
  PREFIX = $(DESTDIR)/usr
@@ -9,8 +9,11 @@
 +BINDIR = $(PREFIX)/bin/
 +DATADIR = $(PREFIX)/share/blobAndConquer/
  DOCDIR = $(PREFIX)/share/doc/$(PROG)/
- ICONDIR = $(PREFIX)/share/icons/
+-ICONDIR = $(PREFIX)/share/icons/
++ICONDIR = $(PREFIX)/share/icons/hicolor/
  MENUDIR = $(PREFIX)/share/applications/
+ LOCALEDIR = $(PREFIX)/share/locale/
+ 
 @@ -96,10 +96,10 @@
  
  # linking the program.
