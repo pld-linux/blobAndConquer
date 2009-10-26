@@ -1,14 +1,15 @@
 Summary:	3D action game
 Summary(pl.UTF-8):	Trójwymiarowa gra akcji
 Name:		blobAndConquer
-Version:	1.08
+Version:	1.09
 Release:	0.1
 License:	GPL v2+
 Group:		X11/Applications/Games
-Source0:	http://www.parallelrealities.co.uk/download/1e0beca9/blobAndConquer/%{name}-%{version}-1.tar.gz
-# Source0-md5:	d78a46c410614f5379959af21a0c4fff
+Source0:	http://www.parallelrealities.co.uk/download/e790f207/blobAndConquer/%{name}-%{version}-1.tar.gz
+# Source0-md5:	e832c6ccc4e56123c0bed50b5e973c1b
 Patch0:		%{name}-makefile.patch
 Patch1:		%{name}-desktop.patch
+Patch2:		%{name}-usless_files.patch
 URL:		http://www.parallelrealities.co.uk/projects/blobAndConquer.php
 BuildRequires:	OpenGL-GLU-devel
 BuildRequires:	OpenGL-devel
@@ -31,6 +32,7 @@ drugi epizod sagi Blob Wars.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 %{__make} \
@@ -59,6 +61,6 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_datadir}/%{name}
 %{_datadir}/%{name}/blobAndConquer.pak
 %{_desktopdir}/%{name}.desktop
-%dir %{_iconsdir}/32x32/apps/
-%{_iconsdir}/32x32/apps/blobAndConquer.png
+%dir %{_iconsdir}/hicolor/32x32/apps/
+%{_iconsdir}/hicolor/32x32/apps/blobAndConquer.png
 %{_pixmapsdir}/%{name}.png
