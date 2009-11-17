@@ -1,12 +1,12 @@
 Summary:	3D action game
 Summary(pl.UTF-8):	Trójwymiarowa gra akcji
 Name:		blobAndConquer
-Version:	1.10
-Release:	1
+Version:	1.11
+Release:	0.1
 License:	GPL v2+
 Group:		X11/Applications/Games
 Source0:	http://www.parallelrealities.co.uk/download/blobAndConquer/%{name}-%{version}-1.tar.gz
-# Source0-md5:	3cefe52e59c17ae9b3dc249262e4b719
+# Source0-md5:	bf719a5663d7442f207f1009242c3c2c
 Patch0:		%{name}-makefile.patch
 Patch1:		%{name}-desktop.patch
 Patch2:		%{name}-usless_files.patch
