@@ -17,6 +17,7 @@ BuildRequires:	SDL_image-devel
 BuildRequires:	SDL_mixer-devel
 BuildRequires:	SDL_ttf-devel
 BuildRequires:	dos2unix
+BuildRequires:	gettext-devel
 BuildRequires:	rpmbuild(macros) >= 1.268
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
